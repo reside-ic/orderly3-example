@@ -27,4 +27,4 @@ jobs:
 
       - name: Check
         run:
-          Rscript check.R
+          Rscript scripts/check

@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 unlink(".outpack", recursive = TRUE)
 
 stopifnot(identical(
