@@ -1,0 +1,12 @@
+#!/usr/bin/env Rscript
+unlink(".outpack", recursive = TRUE)
+
+stopifnot(identical(
+  orderly2::orderly_list_src(),
+  c("computed-resource", "depends", "explicit", "parameters")))
+
+orderly2::orderly_init()
+orderly2::orderly_run("parameters", list(a = 10, c = 30))
+orderly2::orderly_run("explicit")
+orderly2::orderly_run("depends")
+orderly2::orderly_run("computed-resource")
